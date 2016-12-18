@@ -32,10 +32,11 @@ Route::get('/Logout',['as' => 'logout',function(){
     return redirect('/login');
 }]);
 
-Route::group(['prefix' =>'Administrator'], function(){
-    Route::post('/',['as' => 'Administrator.face', 'uses' => 'SchooladminerController@index']);
-    Route::get('/Login',['as' => 'Administrator.login', 'uses' => 'SchooladminerController@login']);
-    Route::get('/Show/{page?}',['as' => 'Administrator.show', 'uses' => 'SchooladminerController@show']);
+Route::group(['prefix' =>'/Administrator'], function(){
+    Route::get('/',['as' => 'Administrator.face', 'uses' => 'SchooladminerController@index']);
+    Route::post('/',['as' => 'Administrator.face', 'uses' => 'SchooladminerController@index']);//
+    Route::get('/Login',['as' => 'Administrator.login', 'uses' => 'SchooladminerController@login']);//登入介面
+    Route::get('/Show/{page?}',['as' => 'Administrator.show', 'uses' => 'SchooladminerController@show']);//資料顯示介面
     // Route::patch('/Fixpassword',['as' => 'landlord.fixpass', 'uses' => 'LandlordController@fixPassword']);
 
 });

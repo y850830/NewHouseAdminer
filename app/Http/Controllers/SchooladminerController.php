@@ -53,5 +53,14 @@ class SchooladminerController extends Controller
         // $school = Site::select('site_name')->where('site_id','1')->first();
         // return view('schooladminer.show',['school'=>$school['site_name'],'status'=>$status]);
         return view('schooladminer.show',['school'=>'NFU','pages'=>$page]);
-    } 
+    }
+    public function create(){
+
+    }
+    public function update(){
+
+    }
+    public function delete(){
+
+    }
 }

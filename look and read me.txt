@@ -1,0 +1,32 @@
+﻿進入方式:
+
+你們的local/Administrator/，進入主頁面
+再由左側bar進入你的區塊
+
+使用區塊:
+
+Controllers用的是SchooladminerController，model有需要的話自己加
+
+view的部分都在resources\views\schooladminer這個檔案夾裡做
+盡量同功能就坐在同一檔案裡
+
+route的部分在routes\web.php裡
+group是Administrator
+route可以同名，可是post和get要分好
+get是Controllers送資料到view(必須有這個動作)，不能從view送資料到Controllers
+post是從view送資料到Controllers(必須有這個動作)，再回view(也可以送資料到view)
+
+顯示資料用SchooladminerController的show函示來做
+更新增料用SchooladminerController的update函示來做
+新增資料用SchooladminerController的create函示來做
+刪除資料用SchooladminerController的delete函示來做
+
+css使用bootstrap的原生css，不知道class的話就上網搜尋"laravel 標籤"或"bootstrap 標籤"應該就找的到做法
+
+如果有引用js的話就放在
+@section('quotes')
+		<=這個區間裡
+@endsection
+
+
+
