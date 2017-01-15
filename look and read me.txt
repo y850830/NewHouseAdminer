@@ -1,5 +1,9 @@
 ﻿進入方式:
 
+經過討論，因前端介面需做重新修改，所以將管理者入口全權交給兩位
+
+登入的方式我有用最陽春的方式寫了，不過為了測試所以我把它註解掉了
+
 你們的local/Administrator/，進入主頁面
 再由左側bar進入你的區塊
 
@@ -8,7 +12,7 @@
 Controllers用的是SchooladminerController，model有需要的話自己加
 
 view的部分都在resources\views\schooladminer這個檔案夾裡做
-盡量同功能就坐在同一檔案裡
+盡量同功能就坐在同一php檔案裡
 
 route的部分在routes\web.php裡
 group是Administrator
@@ -21,9 +25,9 @@ post是從view送資料到Controllers(必須有這個動作)，再回view(也可
 新增資料用SchooladminerController的create函示來做
 刪除資料用SchooladminerController的delete函示來做
 
-css使用bootstrap的原生css，不知道class的話就上網搜尋"laravel 標籤"或"bootstrap 標籤"應該就找的到做法
+css使用bootstrap的原生css，不知道class的話就上網搜尋laravel+"標籤"或bootstrap+"標籤"應該就找的到做法
 
-如果有引用js的話就放在
+如果有引用js的話就放在footer
 @section('quotes')
 		<=這個區間裡
 @endsection
